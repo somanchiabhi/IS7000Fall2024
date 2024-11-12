@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { RxHamburgerMenu } from "react-icons/rx";
 import { FaTimes } from 'react-icons/fa'
+import SignUp from '../pages/user/signup';
 
 function Navbar() {
   // nav is starting off false
@@ -21,6 +22,7 @@ function Navbar() {
 
         <Link to='/wallet'><li>Wallet</li></Link>
         <Link to='/contact'><li>Contact Us</li></Link>
+        <Link to='/signup'><li>SignUp</li></Link>
       </ul>
       {/* Hamburger or Close Icon */}
       <div className=' md:hidden z-10' onClick={handleClick}>
