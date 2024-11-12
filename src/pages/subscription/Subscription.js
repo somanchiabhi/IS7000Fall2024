@@ -1,5 +1,5 @@
-
 import React, { useState } from 'react';
+import TopFiveSubscriptions from './TopFiveSubscriptions';
 
 function Subscription() {
   const [selectedPlan, setSelectedPlan] = useState(null);
@@ -45,6 +45,14 @@ function Subscription() {
   };
 
   return (
+
+    <div className="bg-gray-100 min-h-screen flex flex-col items-center p-8">
+      <h1 className="text-4xl font-bold mb-8 text-center text-black">Top Subscriptions</h1>
+
+      <div className="w-full max-w-2xl bg-white p-6 rounded-lg shadow-lg">
+        <TopFiveSubscriptions />
+      </div>
+
     <div className="flex justify-center items-start p-6 bg-gray-100 min-h-screen">
       {!showPaymentForm ? (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
@@ -132,8 +140,11 @@ function Subscription() {
         </div>
       )}
 
+
     </div>
   );
 }
 
+
 export default Subscription;
+
