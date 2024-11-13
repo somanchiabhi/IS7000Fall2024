@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { RxHamburgerMenu } from "react-icons/rx";
 import { FaTimes } from 'react-icons/fa'
+
+import SignUp from '../pages/user/signup';
 function Navbar() {
   // nav is starting off false
   const [nav, setNav] = useState(false)
@@ -19,7 +21,11 @@ function Navbar() {
 
         <Link to='/wallet'><li>Wallet</li></Link>
         <Link to='/contact'><li>Contact Us</li></Link>
+
+        <Link to='/signup'><li>SignUp</li></Link>
+
         <Link to='/batch'><li>Batch</li></Link>
+
 
       </ul>
       {/* Hamburger or Close Icon */}
@@ -43,6 +49,7 @@ function Navbar() {
         <Link to='/wallet'><li className='hover:text-teal-700'>Wallet</li></Link>
         <Link to='/contact'><li className='hover:text-teal-700'>Contact Us</li></Link>
         <Link to='/batch'><li className='hover:text-teal-700'>Batch</li></Link>
+        <Link to='/signup'><li className='hover:text-teal-700'>Signup</li></Link>
 
       </ul>
     </nav>
