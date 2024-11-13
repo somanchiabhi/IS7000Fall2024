@@ -9,10 +9,13 @@ import Wallet from './pages/wallet/Wallet';
 import User from './pages/user/User';
 import Profile from './pages/profile/Profile';
 import SubscriptionAdmin from './pages/admin/batch/Subscriptionadmin';
+import SignUp from './pages/user/signup';
+import Batch from './pages/admin/batch/Batch';
+
 
 function App() {
   return (
-    <div className="App  w-full h-screen">
+    <div className="App bg-rose-400	  w-full h-screen" >
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
@@ -24,6 +27,8 @@ function App() {
         <Route path='/user' element={<User />} />
         <Route path='/profile' element={<Profile />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/signup' element={<SignUp />} />
+        <Route path="/batch" element={<Batch />} />
       </Routes>
 
     </div>
