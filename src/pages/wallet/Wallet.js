@@ -31,7 +31,7 @@ const initialFailedTransactions = [
 ];
 
 function Wallet() {
-    const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(1);
   const transactionsPerPage = 5;
 
   const indexOfLastTransaction = currentPage * transactionsPerPage;
@@ -61,114 +61,117 @@ function Wallet() {
   };
 
   return (
-    <div className='text-black flex flex-col items-center w-full h-screen p-4 bg-white'>
-    
-     <h1 className='text-4xl mb-4'>Wallet Transactions</h1>
-      <div className='w-full max-w-4xl'>
-        {currentTransactions.map((transaction, index) => (
-          <div key={index} className='bg-gray-800 p-4 mb-2 rounded'>
-            <p>Company: {transaction.company}</p>
-            <p>Amount: ${transaction.amount}</p>
-            <p>Date: {transaction.date}</p>
-          </div>
-        ))}
-      </div>
-      <div className='flex justify-center mt-4'>
-        {[...Array(Math.ceil(dummyData.length / transactionsPerPage)).keys()].map(number => (
-          <button
-            key={number}
-            onClick={() => paginate(number + 1)}
-            className={`px-4 py-2 mx-1 ${currentPage === number + 1 ? 'bg-blue-500' : 'bg-gray-700'} rounded`}
-          >
-            {number + 1}
-          </button>
-        ))}
-      </div>
-    </div>
-    
-      <h1 className='text-4xl mb-4'>Failed Transactions Overview</h1>
-      <div className='w-full max-w-4xl'>
-        <div className='bg-gray-200 p-4 mb-4 rounded'>
-          <h2 className='text-2xl mb-2'>Failed Transactions</h2>
-          {failedTransactions.map((transaction, index) => (
-            <div key={index} className='bg-gray-100 p-4 mb-2 rounded'>
+    <>
+
+      <div className='text-black flex flex-col items-center w-full h-screen p-4 bg-white'>
+
+        <h1 className='text-4xl mb-4'>Wallet Transactions</h1>
+        <div className='w-full max-w-4xl'>
+          {currentTransactions.map((transaction, index) => (
+            <div key={index} className='bg-gray-800 p-4 mb-2 rounded'>
               <p>Company: {transaction.company}</p>
               <p>Amount: ${transaction.amount}</p>
               <p>Date: {transaction.date}</p>
-              <p>Reason: {transaction.reason}</p>
             </div>
           ))}
         </div>
-        <div className='bg-gray-200 p-4 mb-4 rounded'>
-          <h2 className='text-2xl mb-2'>Add New Failed Transaction</h2>
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              addFailedTransaction();
-            }}
-          >
-            <div className='mb-4'>
-              <label className='block text-gray-700 text-sm font-bold mb-2' htmlFor='company'>
-                Company
-              </label>
-              <input
-                type='text'
-                id='company'
-                value={newCompany}
-                onChange={(e) => setNewCompany(e.target.value)}
-                className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-                required
-              />
-            </div>
-            <div className='mb-4'>
-              <label className='block text-gray-700 text-sm font-bold mb-2' htmlFor='amount'>
-                Amount
-              </label>
-              <input
-                type='number'
-                id='amount'
-                value={newAmount}
-                onChange={(e) => setNewAmount(e.target.value)}
-                className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-                required
-              />
-            </div>
-            <div className='mb-4'>
-              <label className='block text-gray-700 text-sm font-bold mb-2' htmlFor='date'>
-                Date
-              </label>
-              <input
-                type='date'
-                id='date'
-                value={newDate}
-                onChange={(e) => setNewDate(e.target.value)}
-                className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-                required
-              />
-            </div>
-            <div className='mb-4'>
-              <label className='block text-gray-700 text-sm font-bold mb-2' htmlFor='reason'>
-                Reason
-              </label>
-              <input
-                type='text'
-                id='reason'
-                value={newReason}
-                onChange={(e) => setNewReason(e.target.value)}
-                className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-                required
-              />
-            </div>
+        <div className='flex justify-center mt-4'>
+          {[...Array(Math.ceil(dummyData.length / transactionsPerPage)).keys()].map(number => (
             <button
-              type='submit'
-              className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
+              key={number}
+              onClick={() => paginate(number + 1)}
+              className={`px-4 py-2 mx-1 ${currentPage === number + 1 ? 'bg-blue-500' : 'bg-gray-700'} rounded`}
             >
-              Add Failed Transaction
+              {number + 1}
             </button>
-          </form>
+          ))}
         </div>
       </div>
-    </div>
+      <div>
+        <h1 className='text-4xl mb-4'>Failed Transactions Overview</h1>
+        <div className='w-full max-w-4xl'>
+          <div className='bg-gray-200 p-4 mb-4 rounded'>
+            <h2 className='text-2xl mb-2'>Failed Transactions</h2>
+            {failedTransactions.map((transaction, index) => (
+              <div key={index} className='bg-gray-100 p-4 mb-2 rounded'>
+                <p>Company: {transaction.company}</p>
+                <p>Amount: ${transaction.amount}</p>
+                <p>Date: {transaction.date}</p>
+                <p>Reason: {transaction.reason}</p>
+              </div>
+            ))}
+          </div>
+          <div className='bg-gray-200 p-4 mb-4 rounded'>
+            <h2 className='text-2xl mb-2'>Add New Failed Transaction</h2>
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                addFailedTransaction();
+              }}
+            >
+              <div className='mb-4'>
+                <label className='block text-gray-700 text-sm font-bold mb-2' htmlFor='company'>
+                  Company
+                </label>
+                <input
+                  type='text'
+                  id='company'
+                  value={newCompany}
+                  onChange={(e) => setNewCompany(e.target.value)}
+                  className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+                  required
+                />
+              </div>
+              <div className='mb-4'>
+                <label className='block text-gray-700 text-sm font-bold mb-2' htmlFor='amount'>
+                  Amount
+                </label>
+                <input
+                  type='number'
+                  id='amount'
+                  value={newAmount}
+                  onChange={(e) => setNewAmount(e.target.value)}
+                  className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+                  required
+                />
+              </div>
+              <div className='mb-4'>
+                <label className='block text-gray-700 text-sm font-bold mb-2' htmlFor='date'>
+                  Date
+                </label>
+                <input
+                  type='date'
+                  id='date'
+                  value={newDate}
+                  onChange={(e) => setNewDate(e.target.value)}
+                  className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+                  required
+                />
+              </div>
+              <div className='mb-4'>
+                <label className='block text-gray-700 text-sm font-bold mb-2' htmlFor='reason'>
+                  Reason
+                </label>
+                <input
+                  type='text'
+                  id='reason'
+                  value={newReason}
+                  onChange={(e) => setNewReason(e.target.value)}
+                  className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+                  required
+                />
+              </div>
+              <button
+                type='submit'
+                className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
+              >
+                Add Failed Transaction
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
 export default Wallet;
