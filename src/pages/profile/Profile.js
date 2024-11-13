@@ -1,14 +1,14 @@
-
-
 import MailingAddressUpdate from './MailingAddressUpdate';
 
 import React, { useState } from 'react';
 import CommunicationPreferences from './CommunicationPreferences';
 import UserProfileSidebar from './UserProfileSidebar';
 import UserProfileDetails from './UserProfileDetails';
+import ProfileUpdateForm from './ProfileUpdateForm';
 
 function Profile() {
   const [activeTab, setActiveTab] = useState('profile');
+  const [isEditing, setIsEditing] = useState(false);
 
   return (
 
@@ -18,6 +18,19 @@ function Profile() {
       <div className="flex-1 p-8">
         <h1 className="text-3xl font-bold text-gray-800 mb-6">Profile Details</h1>
         <UserProfileDetails />
+    
+        {isEditing ? (
+          <ProfileUpdateForm />
+        ) : (
+          <div className="space-y-4">
+            <button
+              onClick={() => setIsEditing(true)}
+              className="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 transition duration-300"
+            >
+              Edit Personal Information
+            </button>
+          </div>
+        )}
       </div>
       <h1 className="text-4xl font-bold mb-6 text-gray-700">Profile Page</h1>
 
