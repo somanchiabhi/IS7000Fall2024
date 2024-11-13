@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import "tailwindcss/tailwind.css"; // Ensure Tailwind CSS is imported
 
@@ -62,8 +61,7 @@ const SubscriptionAdmin = () => {
 
   return (
     <div className="p-5 max-w-3xl mx-auto font-sans">
- 
-      {/* <h2 className="text-2xl font-semibold mb-4 text-center">Subscription Admin</h2>
+      <h2 className="text-2xl font-semibold mb-4 text-center">Subscription Admin</h2>
       <input
         type="text"
         placeholder="Search Subscriptions"
@@ -125,7 +123,7 @@ const SubscriptionAdmin = () => {
             </button>
           )
         )}
-      </div> */}
+      </div>
     </div>
   );
 };
