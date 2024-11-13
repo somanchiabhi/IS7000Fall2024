@@ -23,6 +23,7 @@ const Batch = () => {
           </li>
         ))}
       </ul>
+
     </div>
   );
 };
