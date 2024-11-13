@@ -5,10 +5,10 @@ import { FaFacebook, FaUserCircle } from 'react-icons/fa';
 
 function UserProfileSidebar() {
     const user = {
-        name: 'Nandu Reddy',
-        username: 'Nandureddy',
-        email: 'nandureddy@gmail.com',
-        profilePicture: 'https://via.placeholder.com/100',
+        name: 'Deepa',
+        username: 'deepa007',
+        email: 'deepa@email.com',
+        profilePicture: 'https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/11_avatar-1024.png',
     };
 
     return (
