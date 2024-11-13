@@ -3,6 +3,7 @@ import React from 'react';
 
 import SectorDonutChart from './SectorDonutChart';
 import SectorBarChart from './SectorBarChart';
+import ToptenSubscriptions from './ToptenSubscriptions';
 
 
 const Home = () => {
@@ -45,6 +46,8 @@ const Home = () => {
         <SectorDonutChart />
         <SectorBarChart />
       </div>
+      <ToptenSubscriptions />
+
       {/* Footer */}
       <footer className="w-full bg-gray-800 text-white py-6 text-center">
         <p>© {new Date().getFullYear()} MarketInsyte. All Rights Reserved.</p>
