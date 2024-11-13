@@ -2,6 +2,7 @@ import React from 'react';
 
 import SectorDonutChart from './SectorDonutChart';
 import SectorBarChart from './SectorBarChart';
+import ToptenSubscriptions from './ToptenSubscriptions';
 
 function Home() {
   return (
@@ -12,6 +13,7 @@ function Home() {
         <SectorDonutChart />
         <SectorBarChart />
       </div>
+      <ToptenSubscriptions />
     </div>
   );
 }
