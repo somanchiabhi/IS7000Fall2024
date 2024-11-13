@@ -26,6 +26,7 @@ function Subscription() {
         <SubscriptionPlans />
       </div>
     </div>
+    </div>
   );
 }
 export default Subscription;
