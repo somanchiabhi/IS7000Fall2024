@@ -10,7 +10,6 @@ import User from './pages/user/User';
 import Profile from './pages/profile/Profile';
 import Batch from './pages/admin/batch/Batch';
 
-
 function App() {
   return (
     <div className="App bg-rose-400	  w-full h-screen" >
