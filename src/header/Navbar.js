@@ -24,15 +24,14 @@ function Navbar() {
       </ul>
       {/* Hamburger or Close Icon */}
       <div className=' md:hidden z-10' onClick={handleClick}>
-        {nav ? <FaTimes size={25} color='white' /> : <RxHamburgerMenu size={25}/>}
+        {nav ? <FaTimes size={25} color='white' /> : <RxHamburgerMenu size={25} />}
       </div>
       {/* Mobile Menu */}
       <ul
-        className={`${
-          nav
+        className={`${nav
             ? 'text-white opacity-100 transform translate-x-0'
             : 'opacity-0 transform -translate-y-full'
-        } transition-transform absolute top-0 left-0 w-full h-screen bg-zinc-800/80 flex flex-col justify-center items-center text-2xl`}
+          } transition-transform absolute top-0 left-0 w-full h-screen bg-zinc-800/80 flex flex-col justify-center items-center text-2xl`}
         onClick={() => setNav(false)}
       >
         <Link to='/'><li className='hover:text-teal-700'>Home</li></Link>
@@ -48,3 +47,5 @@ function Navbar() {
       </ul>
     </nav>
   )
+}
+export default Navbar
