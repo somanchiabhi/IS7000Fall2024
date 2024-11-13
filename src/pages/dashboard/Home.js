@@ -2,6 +2,7 @@ import React from 'react';
 
 import SectorDonutChart from './SectorDonutChart';
 import SectorBarChart from './SectorBarChart';
+import MarketOverviewHome from './MarketOverviewHome';
 
 function Home() {
   return (
@@ -11,6 +12,7 @@ function Home() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <SectorDonutChart />
         <SectorBarChart />
+        <MarketOverviewHome />
       </div>
     </div>
   );
