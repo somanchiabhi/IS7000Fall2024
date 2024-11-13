@@ -30,7 +30,6 @@ function Profile() {
 
       <MailingAddressUpdate />
 
-    <div className="flex flex-col items-center p-6 bg-gray-100 min-h-screen">
       <h1 className="text-4xl font-bold mb-6 text-gray-700">Profile Page</h1>
 
       <div className="w-full max-w-2xl">
