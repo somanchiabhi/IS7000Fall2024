@@ -2,13 +2,11 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { RxHamburgerMenu } from "react-icons/rx";
 import { FaTimes } from 'react-icons/fa'
-
 function Navbar() {
   // nav is starting off false
   const [nav, setNav] = useState(false)
   // so when user clicks the hamburger button, it goes from false(!nav) to true(nav)
   const handleClick = () => setNav(!nav)
-
   return (
     <nav className='flex justify-between p-5 items-center border-b bg-[#e7e7e7d1] nav'>
       <h1 className='text-4xl logo'>Market Insyte</h1>
@@ -22,7 +20,7 @@ function Navbar() {
         <Link to='/wallet'><li>Wallet</li></Link>
         <Link to='/contact'><li>Contact Us</li></Link>
         <Link to='/batch'><li>Batch</li></Link>
-        
+
       </ul>
       {/* Hamburger or Close Icon */}
       <div className=' md:hidden z-10' onClick={handleClick}>
@@ -50,6 +48,3 @@ function Navbar() {
       </ul>
     </nav>
   )
-}
-
-export default Navbar
