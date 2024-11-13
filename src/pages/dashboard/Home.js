@@ -1,7 +1,13 @@
 import React from 'react';
 
+
+import SectorDonutChart from './SectorDonutChart';
+import SectorBarChart from './SectorBarChart';
+
+
 const LandingPage = () => {
   return (
+
     <div className="bg-gray-100 min-h-screen flex flex-col items-center">
       {/* Header */}
       <header className="w-full bg-blue-600 text-white py-4 px-8 shadow-md">
@@ -35,7 +41,10 @@ const LandingPage = () => {
           <p className="mt-2 text-gray-600">Visualize data the way you need with intuitive dashboards.</p>
         </div>
       </section>
-
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <SectorDonutChart />
+        <SectorBarChart />
+      </div>
       {/* Footer */}
       <footer className="w-full bg-gray-800 text-white py-6 text-center">
         <p>© {new Date().getFullYear()} MarketInsyte. All Rights Reserved.</p>
@@ -44,4 +53,5 @@ const LandingPage = () => {
   );
 };
 
-export default LandingPage;
+export default Home;
+
