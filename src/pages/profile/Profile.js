@@ -1,8 +1,11 @@
 
+
 import MailingAddressUpdate from './MailingAddressUpdate';
 
 import React, { useState } from 'react';
 import CommunicationPreferences from './CommunicationPreferences';
+import UserProfileSidebar from './UserProfileSidebar';
+import UserProfileDetails from './UserProfileDetails';
 
 function Profile() {
   const [activeTab, setActiveTab] = useState('profile');
@@ -10,6 +13,12 @@ function Profile() {
   return (
 
     <div className="flex flex-col items-center p-6 bg-gray-50 min-h-screen">
+          <UserProfileSidebar />
+
+      <div className="flex-1 p-8">
+        <h1 className="text-3xl font-bold text-gray-800 mb-6">Profile Details</h1>
+        <UserProfileDetails />
+      </div>
       <h1 className="text-4xl font-bold mb-6 text-gray-700">Profile Page</h1>
 
       <div className="bg-white shadow-lg p-6 rounded-lg w-full max-w-2xl mb-6">
@@ -53,7 +62,6 @@ function Profile() {
           <CommunicationPreferences />
         )}
       </div>
-
     </div>
   );
 }
