@@ -17,14 +17,14 @@ function Subscription() {
 
       <div className="w-full max-w-2xl bg-white p-6 rounded-lg shadow-lg">
         <EditSubscription />
-
+      </div>
       <div className="w-full max-w-2xl bg-white p-6 rounded-lg shadow-lg">
         <TopFiveSubscriptions />
       </div>
 
       <div className="flex justify-center items-start p-6 bg-gray-100 min-h-screen">
 
-      <SubscriptionPlans />
+        <SubscriptionPlans />
 
       </div>
     </div>
