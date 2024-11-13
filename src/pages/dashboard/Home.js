@@ -3,7 +3,11 @@ import React from 'react';
 
 import SectorDonutChart from './SectorDonutChart';
 import SectorBarChart from './SectorBarChart';
+
+import MarketOverviewHome from './MarketOverviewHome';
+
 import ToptenSubscriptions from './ToptenSubscriptions';
+
 
 
 const Home = () => {
@@ -45,8 +49,9 @@ const Home = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <SectorDonutChart />
         <SectorBarChart />
+        <MarketOverviewHome />
+        <ToptenSubscriptions />
       </div>
-      <ToptenSubscriptions />
 
       {/* Footer */}
       <footer className="w-full bg-gray-800 text-white py-6 text-center">
