@@ -2,14 +2,16 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { RxHamburgerMenu } from "react-icons/rx";
 import { FaTimes } from 'react-icons/fa'
-
+import Login from '../pages/user/Login';
+import SignUp from '../pages/user/signup';
 function Navbar() {
   // nav is starting off false
   const [nav, setNav] = useState(false)
   // so when user clicks the hamburger button, it goes from false(!nav) to true(nav)
   const handleClick = () => setNav(!nav)
-
+  const [token, setToken] = useState(null);
   return (
+
     <nav className='flex justify-between p-5 items-center border-b bg-[#e7e7e7d1] nav'>
       <h1 className='text-4xl logo'>Market Insyte</h1>
       <ul className='hidden  md:flex gap-6'>
@@ -47,7 +49,10 @@ function Navbar() {
         <Link to='/contact'><li className='hover:text-teal-700'>Contact Us</li></Link>
       </ul>
     </nav>
+
+      {token == null ? <Login setToken={setToken} /> : null}
+    </>
+
   )
 }
-
 export default Navbar
