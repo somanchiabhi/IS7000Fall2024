@@ -8,10 +8,10 @@ import Subscription from './pages/subscription/Subscription';
 import Wallet from './pages/wallet/Wallet';
 import User from './pages/user/User';
 import Profile from './pages/profile/Profile';
+import Footer from './header/Footer';
 import Subscriptionadminhome from './pages/admin/batch/Subscriptionadminhome';
 import SignUp from './pages/user/signup';
 import Batch from './pages/admin/batch/Batch';
-
 
 function App() {
   return (
@@ -29,6 +29,7 @@ function App() {
         <Route path='/signup' element={<SignUp />} />
         <Route path="/batch" element={<Batch />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
