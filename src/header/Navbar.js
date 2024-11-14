@@ -19,7 +19,6 @@ function Navbar() {
           <Link to='/'><li>Home</li></Link>
           <Link to='/markets'><li>Market Overview</li></Link>
           <Link to='/subscription'><li>Subscriptions</li></Link>
-
            <Link to='/subscriptionadmin'><li>SubscriptionAdmin</li></Link>
           <Link to='/user'><li>User</li></Link>
           <Link to='/profile'><li>Profile</li></Link>
@@ -47,7 +46,7 @@ function Navbar() {
           <Link to='/'><li className='hover:text-teal-700'>Home</li></Link>
           <Link to='/markets'><li className='hover:text-teal-700'>Market Overview</li></Link>
           <Link to='/subscription'><li className='hover:text-teal-700'>Subscriptions</li></Link>
-          <Link to='/subscriptionadmin'><li className='hover:text-teal-700'>Subscriptionadmin</li></Link>
+          <Link to='/subscriptionadmin'><li className='hover:text-teal-700'>SubscriptionAdmin</li></Link>
 
           <Link to='/user'><li className='hover:text-teal-700'>User</li></Link>
           <Link to='/profile'><li className='hover:text-teal-700'>Profile</li></Link>
