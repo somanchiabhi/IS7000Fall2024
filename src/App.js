@@ -8,6 +8,7 @@ import Subscription from './pages/subscription/Subscription';
 import Wallet from './pages/wallet/Wallet';
 import User from './pages/user/User';
 import Profile from './pages/profile/Profile';
+import Footer from './header/Footer';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path='/profile' element={<Profile />} />
         <Route path='/contact' element={<Contact />} />
       </Routes>
+      <Footer />
 
     </div>
   );
