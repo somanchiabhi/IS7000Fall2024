@@ -8,7 +8,10 @@ import Subscription from './pages/subscription/Subscription';
 import Wallet from './pages/wallet/Wallet';
 import User from './pages/user/User';
 import Profile from './pages/profile/Profile';
-import SubscriptionAdmin from './pages/admin/batch/SubscriptionAdmin';
+
+import SubscriptionAdmin from './pages/admin/batch/Subscriptionadmin';
+import SignUp from './pages/user/signup';
+import Batch from './pages/admin/batch/Batch';
 
 function App() {
   return (
@@ -19,12 +22,12 @@ function App() {
         <Route path='/markets' element={<MarketOverview />} />
         <Route path='/subscription' element={<Subscription />} />
         <Route path='/subscriptionadmin' element={<SubscriptionAdmin />} />
-
-        
         <Route path='/wallet' element={<Wallet />} />
         <Route path='/user' element={<User />} />
         <Route path='/profile' element={<Profile />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/signup' element={<SignUp />} />
+        <Route path="/batch" element={<Batch />} />
       </Routes>
 
     </div>
