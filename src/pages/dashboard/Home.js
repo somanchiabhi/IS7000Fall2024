@@ -4,8 +4,13 @@ import React from 'react';
 import SectorDonutChart from './SectorDonutChart';
 import SectorBarChart from './SectorBarChart';
 
+import MarketOverviewHome from './MarketOverviewHome';
 
-const LandingPage = () => {
+import ToptenSubscriptions from './ToptenSubscriptions';
+
+
+
+const Home = () => {
   return (
 
     <div className="bg-gray-100 min-h-screen flex flex-col items-center">
@@ -44,7 +49,10 @@ const LandingPage = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <SectorDonutChart />
         <SectorBarChart />
+        <MarketOverviewHome />
+        <ToptenSubscriptions />
       </div>
+
       {/* Footer */}
       <footer className="w-full bg-gray-800 text-white py-6 text-center">
         <p>© {new Date().getFullYear()} MarketInsyte. All Rights Reserved.</p>
