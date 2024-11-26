@@ -12,8 +12,15 @@ import Footer from './header/Footer';
 import Subscriptionadminhome from './pages/admin/batch/Subscriptionadminhome';
 import SignUp from './pages/user/signup';
 import Batch from './pages/admin/batch/Batch';
+import Logs from "./pages/admin/Logs";
+import {setAuthToken} from "./pages/user/AuthToken";
 
 function App() {
+    //check jwt token
+    const token = localStorage.getItem("token");
+    if (token) {
+        setAuthToken(token);
+    }
   return (
     <div className="App bg-rose-400	  w-full h-screen" >
       <Navbar />
@@ -28,6 +35,8 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/signup' element={<SignUp />} />
         <Route path="/batch" element={<Batch />} />
+          <Route path="/log" element={<Logs />} />
+
       </Routes>
       <Footer />
     </div>
