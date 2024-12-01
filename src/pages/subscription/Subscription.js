@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import TopFiveSubscriptions from './TopFiveSubscriptions';
 import SubscriptionPlans from './Subscriptionform';
 import DeleteSubscription from './DeleteSubscription';
+import SubscriptionList from './SubscriptionList';
 
 function Subscription() {
   const [selectedPlan, setSelectedPlan] = useState(null);
@@ -24,6 +25,10 @@ function Subscription() {
         <div className="flex justify-center items-start p-6 bg-gray-100 min-h-screen">
 
           <SubscriptionPlans />
+        </div>
+        <div className="flex justify-center items-start p-6 bg-gray-100 min-h-screen">
+
+          <SubscriptionList />
         </div>
       </div>
     </div>
