@@ -4,7 +4,11 @@ import SectorBarChart from './SectorBarChart';
 import MarketOverviewHome from './MarketOverviewHome';
 import ToptenSubscriptions from './ToptenSubscriptions';
 import ToptenServices from "./ToptenServices";
+
 import SectorOverviewHome from './SectorOverviewHome';
+
+import ToptenTransactions from './TopTenTransactions';
+
 
 
 const Home = () => {
@@ -50,8 +54,8 @@ const Home = () => {
                 <SectorBarChart />
                 <MarketOverviewHome />
                 <SectorOverviewHome />
-                <ToptenSubscriptions />
-                <ToptenServices />
+                <ToptenTransactions />
+
             </div>
 
             {/* Footer */}
