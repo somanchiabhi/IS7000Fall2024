@@ -4,6 +4,7 @@ import SectorBarChart from './SectorBarChart';
 import MarketOverviewHome from './MarketOverviewHome';
 import ToptenSubscriptions from './ToptenSubscriptions';
 import ToptenServices from "./ToptenServices";
+import SectorOverviewHome from './SectorOverviewHome';
 import ToptenTransactions from './TopTenTransactions';
 
 const Home = () => {
@@ -48,8 +49,12 @@ const Home = () => {
 
             {/* Main Dashboard Content */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <SectorBarChart />
+
+
+                 <SectorBarChart />
                 <MarketOverviewHome />
+                 <SectorOverviewHome />
+                <ToptenTransactions />
                 <ToptenSubscriptions />
                 <ToptenServices />
                 <ToptenTransactions />
