@@ -3,7 +3,8 @@ import React from 'react';
 import SectorBarChart from './SectorBarChart';
 import MarketOverviewHome from './MarketOverviewHome';
 import ToptenSubscriptions from './ToptenSubscriptions';
-import ToptenServices from './ToptenServices';
+import ToptenServices from "./ToptenServices";
+import ToptenTransactions from './TopTenTransactions';
 
 const Home = () => {
     return (
@@ -51,6 +52,7 @@ const Home = () => {
                 <MarketOverviewHome />
                 <ToptenSubscriptions />
                 <ToptenServices />
+                <ToptenTransactions />
             </div>
 
             {/* Footer */}
