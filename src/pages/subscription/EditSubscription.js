@@ -17,17 +17,14 @@ function EditSubscription() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Fetch current user details
         const userResponse = await axios.get('http://3.218.8.102/api/account');
         setCurrentUser(userResponse.data);
 
-        // Fetch subscriptions
         const subscriptionsResponse = await axios.get(
           'http://3.218.8.102/api/subscriptions?page=0&size=20&sort=id,asc'
         );
         setSubscriptions(subscriptionsResponse.data);
 
-        // Fetch services
         const servicesResponse = await axios.get('http://3.218.8.102/api/services');
         setServices(servicesResponse.data);
 
@@ -75,7 +72,6 @@ function EditSubscription() {
 
       await axios.put(`http://3.218.8.102/api/subscriptions/${editingSubscription}`, payload);
 
-      // Update local state after saving
       const updatedSubscriptions = subscriptions.map((sub) =>
         sub.id === editingSubscription ? { ...sub, ...payload } : sub
       );
