@@ -1,5 +1,7 @@
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import CreateUserForm from './CreateUser';
 
 function Users() {
   const [users, setUsers] = useState([]);
@@ -86,9 +88,11 @@ function Users() {
             >
               Delete
             </button>
+
           </li>
         ))}
       </ul>
+      <CreateUserForm />
     </div>
   );
 }
