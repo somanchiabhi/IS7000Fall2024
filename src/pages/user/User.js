@@ -1,4 +1,5 @@
 import React from 'react';
+import CreateUserForm from './CreateUser';
 
 function Users() {
   const users = [
@@ -21,6 +22,7 @@ function Users() {
           </li>
         ))}
       </ul>
+      <CreateUserForm />
     </div>
   );
 }
