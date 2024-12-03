@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ReportTransactionCard from "./reporttransaction";
 
+
 const Wallet = () => {
   // Simulated transactions data
   const transactions = Array.from({ length: 30 }, (_, index) => ({
