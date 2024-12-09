@@ -6,6 +6,7 @@ import Contact from './pages/Contact';
 import MarketOverview from './pages/dashboard/MarketOverview';
 import Subscription from './pages/subscription/Subscription';
 import Wallet from './pages/wallet/Wallet';
+import User from './pages/user/User';
 import UserRolePage from './pages/user/UserRolePage';
 import AdminDashboard from './pages/role-dashboards/AdminDashboard'; // Import Admin Dashboard
 import EditorDashboard from './pages/role-dashboards/EditorDashboard'; // Import Editor Dashboard
@@ -43,6 +44,7 @@ function App() {
 
                 {/* Role-Based Pages */}
                 <Route path="/user" element={<UserRolePage />} />
+                <Route path='/user2' element={<User />} />
                 <Route path="/admin-dashboard" element={<AdminDashboard />} /> {/* New Admin Route */}
                 <Route path="/editor-dashboard" element={<EditorDashboard />} />
                 <Route path="/viewer-dashboard" element={<ViewerDashboard />} />
